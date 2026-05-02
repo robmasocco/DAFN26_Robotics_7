@@ -1,6 +1,6 @@
-% DAFN25 - Robotics - Lecture 4
+% DAFN26 - Robotics - Lecture 7
 % Roberto Masocco <roberto.masocco@uniroma2.it>
-% May 13, 2025
+% May 2, 2026
 
 \documentclass[aspectratio=169]{beamer}
 
@@ -16,7 +16,7 @@
   longinstitute={Tor Vergata University of Rome},
   department={Department of Civil Engineering and Computer Science Engineering},
   researchgroup={},
-  date={May 13, 2025}
+  date={May 13, 2026}
 ]{utvengbeamer}
 
 % Code listings settings
@@ -25,7 +25,7 @@
 \definecolor{codered}{rgb}{1 0 0}
 \definecolor{codeocher}{rgb}{0.8 0.47 0.13}
 \usepackage{listings}
-\lstdefinestyle{beamer}{
+\lstdefinestyle{codebeamer}{
   basicstyle=\ttfamily\small,
   commentstyle=\color{codegreen},
   breakatwhitespace=false,
@@ -42,7 +42,7 @@
   stringstyle=\color{codeocher},
   tabsize=2
 }
-\lstset{style=beamer}
+\lstset{style=codebeamer}
 \lstdefinelanguage{ros2msg}{
   alsoletter={[, ], _, /},
   morecomment=[l][\color{codegreen}]{\#},
@@ -67,13 +67,11 @@
 \end{frame}
 
 % --- Section 1 ---
-\input{sections/interfaces}
-
-% --- Section 2 ---
 \input{sections/actions}
 
 % --- Exercises ---
 \begin{frame}{Exercises}
+  \justifying
 	\begin{itemize}
 		\item Run the action client and server examples, and try to call the action from the command line.
 		\item Modify the feedback message: instead of a partial sequence, it should publish the length of the sequence so far; this requires:
